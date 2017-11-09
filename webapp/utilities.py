@@ -1,5 +1,5 @@
 import inspect
-import dash_core_components as dcc
+import pandas as pd
 
 def automain(function):
     locale = inspect.stack()[1][0].f_locals
@@ -18,8 +18,13 @@ def get_credentials(filename):
 
 def get_markdown(filename):
 	with open(filename) as file:
-		objects = []
+		sections = []
 		data = file.read().split('\n---\n')
 		for section in data:
-			objects.append(dcc.Markdown(section))
-		return objects
+			sections.append(section)
+		return sections
+
+def get_map_rating_data(filename):
+	data_frame = pd.read_csv(filename)
+	return data_frame, data_frame['lat'].mean(),\
+		data_frame['lon'].mean()
