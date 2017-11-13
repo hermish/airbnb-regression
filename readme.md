@@ -16,8 +16,8 @@ which there will be a guest, but we use this as our best estimate.
 
 We visualized the listings data on a map, using a color scale from red to green 
 to indicate the average rating of each location, using the size of each
-marker to represent the volume of bookings. We acn then also examine where
-prices are the highest in San Francisco
+marker to represent the volume of bookings. We can then also examine where
+prices are the highest in San Francisco.
 
 ### Estimating Revenue
 > Given the geo-location (latitude and longitude) of a new property, estimate 
@@ -28,7 +28,7 @@ neighbourhood. For each of these, we construct a linear model with parameters
 longitude and latitude to estimate local price and volume. Pre-computing these
 models allows for efficient predictions of AirBnB prices from these local
 estimates, by then selecting the model which are most relevent to a particular
-location
+location.
 
 ### Booking Optimization
 > Given the geo-location (latitude and longitude) of a property, what is the 
