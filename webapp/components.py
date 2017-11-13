@@ -5,6 +5,8 @@ import plotly.graph_objs as go
 
 from utilities import get_markdown, get_credentials, get_map_rating_data, get_map_revenue_data
 
+
+# CONSTANTS
 CREDENTIAL_FILE = '../credentials/credentials.txt'
 MAP_RATING_DATA_FILE = '../model/map_ratings_data.csv'
 MAP_REVENUE_DATA_FILE = '../model/map_revenue_data.csv'
@@ -26,6 +28,7 @@ PANCAKE = [[0, 'rgb(255,255,255)'],
 # TEXT SECTIONS
 sections = get_markdown('text.md')
 markdown = [dcc.Markdown(sec) for sec in sections]
+
 
 # TRENDS MODULE
 map_rating_data, lat_avg, lon_avg = get_map_rating_data(
