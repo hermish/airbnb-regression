@@ -1,5 +1,6 @@
 import inspect
 import pandas as pd
+import numpy as np
 
 def automain(function):
     locale = inspect.stack()[1][0].f_locals
@@ -28,3 +29,7 @@ def get_map_rating_data(filename):
 	data_frame = pd.read_csv(filename)
 	return data_frame, data_frame['lat'].mean(),\
 		data_frame['lon'].mean()
+
+def get_map_revenue_data(filename):
+	data_frame = pd.read_csv(filename)
+	return data_frame
