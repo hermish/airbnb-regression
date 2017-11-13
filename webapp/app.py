@@ -42,7 +42,7 @@ def update_output(n_clicks, longitude, latitude):
 	except ValueError:
 		return 'Please enter a valid number!'
 	predicted_rev = predict_rev(lon, lat, MODEL)
-	return 'The expected revenue for this location is ${}'.format(predicted_rev)
+	return 'The expected revenue for this location is ${:.2f}'.format(predicted_rev)
 
 @app.callback(
 	dash.dependencies.Output('booking-output', 'children'),
@@ -56,7 +56,7 @@ def update_output(n_clicks, longitude, latitude):
 	except ValueError:
 		return 'Please enter a valid number!'
 	optimal_price = find_opt_price(lon, lat, MODEL)
-	return 'The optimal price for this location is ${}'.format(optimal_price)
+	return 'The optimal price for this location is ${:.2f}'.format(optimal_price)
 		
 
 # RUN
