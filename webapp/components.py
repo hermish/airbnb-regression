@@ -7,9 +7,9 @@ from utilities import get_markdown, get_credentials, get_map_rating_data, get_ma
 
 
 # CONSTANTS
-CREDENTIAL_FILE = '../credentials/credentials.txt'
-MAP_RATING_DATA_FILE = '../model/map_ratings_data.csv'
-MAP_REVENUE_DATA_FILE = '../model/map_revenue_data.csv'
+CREDENTIAL_FILE = 'credentials/credentials.txt'
+MAP_RATING_DATA_FILE = 'model/map_ratings_data.csv'
+MAP_REVENUE_DATA_FILE = 'model/map_revenue_data.csv'
 CREDENTIALS = get_credentials(CREDENTIAL_FILE)
 COLORSCALE = [[0, 'rgb(242,78,78)'],
 	[0.25, 'rgb(247,129,69)'],
@@ -86,7 +86,13 @@ trends_module = html.Div(
 					)
 				],
 				layout=go.Layout(
-					title='Price as a function of Position'
+					title='Price as a function of Position',
+					xaxis=dict(
+       					title='Longitude (deg)'
+       				),
+       				yaxis=dict(
+       					title='Latitude (deg)'
+       				)
 				)
 			),
 			style={'width': '100%', 'height': 500}
@@ -145,7 +151,13 @@ price_module = html.Div(
 					)
 				],
 				layout=go.Layout(
-					title='Revenue as a function of Position'
+					title='Revenue as a function of Position',
+					xaxis=dict(
+       					title='Longitude'
+       				),
+       				yaxis=dict(
+       					title='Latitude'
+       				)
 				)
 			),
 			style={'width': '100%', 'height': 500}
@@ -185,8 +197,12 @@ booking_module = html.Div(
 				layout=go.Layout(
 					title='Overall Revenue and Price Curve',
 					xaxis=dict(
-        				range=[0, 500]
-    				)
+        				range=[0, 500],
+        				title='Price ($)'
+    				),
+       				yaxis=dict(
+       					title='Revenue ($)'
+       				)
 				)
 			),
 			style={'width': '100%', 'height': 500}
