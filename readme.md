@@ -1,5 +1,7 @@
 # AirBnB Optimization
 
+See the application [here](http://airbnb-optimization.herokuapp.com)!
+
 ## Tools and Resources
 Data analysis completed in R, with most source code provided. The app itself is 
 created using Dash, a Python framework for building analytical web applications
