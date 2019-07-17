@@ -20,6 +20,7 @@ app.layout = html.Div(children=[
     components.markdown_modules[2],
     components.regression_module
 ])
+server = app.server
 
 
 current_classifier = lambda test: test
