@@ -1,5 +1,5 @@
-# UNNECESSARY DATA
-credentials/
+# PRIVATE DATA
+credentials.json
 
 # OSX GENERATED FILES
 .DS_Store
