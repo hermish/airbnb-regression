@@ -1,41 +1,59 @@
-# AirBnB Optimization
+# AirBnB Regression
 
-See the application [here](http://airbnb-optimization.herokuapp.com)!
+> Visualization of common machine learning regression algorithms on San
+> Francisco AirBnB listing data.
 
-## Tools and Resources
-Data analysis completed in R, with most source code provided. The app itself is 
-created using Dash, a Python framework for building analytical web applications
-atop Plotly.js, React, and Flask.
+See the application hosted [here](http://airbnb-reg-v1.herokuapp.com/). For
+comparison, [here](http://airbnb-reg-v0.herokuapp.com/) is the original
+version of the web application.
 
-The primary assumption I made while analyzing the data is that the number of
-unavailable days for each AirBnB is equal to the number of days it was booked,
-at least over the coming 30 days. This clearly overcounts the number of days for
-which there will be a guest, but we use this as our best estimate.
+## About
 
-## Summary
-### Visualizing the Data
-> Graph some (any 3) interesting metrics, maps, or trends from the dataset
+This web application was built almost completely in Python, using
+[Dash](https://plot.ly/dash/), a Python framework for building analytical web 
+applications atop React and Flask. Dash plays particular well with
+[plotly](https://plot.ly/), which was used to create the live visualizations.
 
-We visualized the listings data on a map, using a color scale from red to green 
-to indicate the average rating of each location, using the size of each
-marker to represent the volume of bookings. We can then also examine where
-prices are the highest in San Francisco.
+The data was imported and analyzed using [pandas](https://pandas.pydata.org/), 
+while the regression models were built with [scikit-learn](https://scikit-learn.org),
+a common Python machine learning library. Specifically, the application
+showcases the polynomial regression, k-nearest neighbors and support vector
+machine regression (SVR) models available in scikit-learn.
 
-### Estimating Revenue
-> Given the geo-location (latitude and longitude) of a new property, estimate 
-> the weekly average income the homeowner can make with Airbnb.
+## Installation
 
-To estimate the weekely average income, we clustered the data points based on
-neighbourhood. For each of these, we construct a linear model with parameters
-longitude and latitude to estimate local price and volume. Pre-computing these
-models allows for efficient predictions of AirBnB prices from these local
-estimates, by then selecting the model which are most relevent to a particular
-location.
+To install and run this web application locally, following the steps below
+after downloading the repository. First, we need to ensure the correct
+dependencies are installed, which are listed in `production/requirements.txt`.
+This can be done from the terminal with the following command.
 
-### Booking Optimization
-> Given the geo-location (latitude and longitude) of a property, what is the 
-> ideal price per night that will yield maximum bookings or revenue?
+```
+pip install -r production/requirements.txt
+```
 
-We approched this problem very similarly; there seems to be no clear
-price-revenue curve, hence we attempt to optimize the number of booking by
-simply suggesting a competitive price.
+After installing the appropriate dependencies, navigate to the app folder and
+start the server by simply running `app.py`. Now the application should be
+running locally: visit `http://localhost:8050/` to see it.
+
+```
+cd app
+python app.py
+```
+
+## History
+
+The the original version of the web application was initially built for the
+CapitalOne Software Engineering summit. As part of the challenge, we were
+required to build a web application which explored the following questions.
+
+1. Graph some (any 3) interesting metrics, maps, or trends from the dataset.
+2. Given the geo-location (latitude and longitude) of a new property, estimate
+the weekly average income the homeowner can make with Airbnb.
+3. Given the geo-location (latitude and longitude) of a property, what is the 
+ideal price per night that will yield maximum bookings or revenue?
+
+After taking a machine learning class, I decided that the data would
+be perfect for visualizing various machine learning regression algorithms, since
+a 3D plot had a clear interpretation: it represented a price map over San
+Francisco.
+
