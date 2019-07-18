@@ -54,6 +54,5 @@ ideal price per night that will yield maximum bookings or revenue?
 
 After taking a machine learning class, I decided that the data would
 be perfect for visualizing various machine learning regression algorithms since
-a 3D plot had a clear interpretation: it represented a price map over San
+a 3D plot had a clear interpretation: it represents a price map over San
 Francisco.
-
