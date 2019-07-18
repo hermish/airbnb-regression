@@ -14,6 +14,9 @@ This web application was built almost completely in Python, using
 applications atop React and Flask. Dash plays particular well with
 [plotly](https://plot.ly/), which was used to create the live visualizations.
 
+![Map Image](https://github.com/hermish/airbnb-regression/blob/master/docs/maps.png?raw=true)
+![Regression Image](https://github.com/hermish/airbnb-regression/blob/master/docs/regression.png?raw=true)
+
 The data was imported and analyzed using [pandas](https://pandas.pydata.org/), 
 while the regression models were built with [scikit-learn](https://scikit-learn.org),
 a common Python machine learning library. Specifically, the application
