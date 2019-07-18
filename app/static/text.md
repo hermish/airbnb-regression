@@ -16,7 +16,7 @@ of number of rating, price or volume of bookings.
 To estimate the value of a listing based on its latitude and longitude, we can 
 choose one of many possible regression models. The default setting is k-nearest
 neighbors regression, which estimates the price by "polling" the values of
-nearby listing. However, below we can choose from linear regression, k-nearest
-neighbors and support vector machine (SVM) regression. This provides a unique 
-opportunity to visualize various regression models on (messy)
+nearby listing. However, below we can choose from polynomial regression, 
+k-nearest neighbors and support vector machine (SVM) regression. This provides 
+a unique opportunity to visualize various regression models on (messy)
 real world data.

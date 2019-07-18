@@ -7,8 +7,10 @@ from dash.dependencies import Input, Output, State
 import components
 
 
-EXTERNAL_CSS = ['https://www.ocf.berkeley.edu/~hermish/files/scripts/core.css',
-    'https://www.ocf.berkeley.edu/~hermish/files/scripts/test.css']
+EXTERNAL_CSS = [
+    'https://www.ocf.berkeley.edu/~hermish/files/scripts/core.css',
+    'https://www.ocf.berkeley.edu/~hermish/files/scripts/test.css'
+]
 
 
 app = dash.Dash(__name__, external_stylesheets=EXTERNAL_CSS)

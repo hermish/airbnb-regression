@@ -152,7 +152,7 @@ regression_module = html.Div(
                             id='drop-select-algorithm',
                             options=[
                                 {'label': 'k-Nearest Neighbors', 'value': 'knn'},
-                                {'label': 'Linear Regression', 'value': 'linear'},
+                                {'label': 'Polynomial Regression', 'value': 'linear'},
                                 {'label': 'SVM Regression', 'value': 'svm'}
                             ],
                             value='knn',
