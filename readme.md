@@ -53,7 +53,7 @@ the weekly average income the homeowner can make with Airbnb.
 ideal price per night that will yield maximum bookings or revenue?
 
 After taking a machine learning class, I decided that the data would
-be perfect for visualizing various machine learning regression algorithms, since
+be perfect for visualizing various machine learning regression algorithms since
 a 3D plot had a clear interpretation: it represented a price map over San
 Francisco.
 
